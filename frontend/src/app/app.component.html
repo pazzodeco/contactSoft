@@ -1,0 +1,17 @@
+<div *ngFor="let c of contacts">
+  <div *ngIf="c.companyName!=null;then tmpEn else tempPa"></div>
+  <ng-template #tmpEn>
+    <ul>
+      <li>Company name : {{c.companyName}}</li>
+      <li>ICE : {{c.ice}}</li>
+    </ul>
+  </ng-template>
+
+  <ng-template #tempPa>
+    <li>First name: {{c.firstName}}</li>
+    <li>Last name: {{c.lastName}}</li>
+  </ng-template>
+  <p>{{c.address}}</p>
+  <p>{{c.tel}}</p>
+
+</div>
